@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+FILE *fptr1;
+char path[100],c;
+int characters,words,lines;
+fptr1=fopen("counting.txt","w");
+printf("Enter the text.press ");
+while((c=getchar())!=EOF){
+putc(c,file);
+}
+fclose(fptr1);
+printf("Enter source file path: ");
+scanf("%s",path);
+fptr1 =fopen(path,"r");
+if(file ==NULL){
+	printf("Unable to open file. ");
+	exit(EXIT_FAILURE);
+}
+characters = words = lines = 0;
+while((ch=fgetc(fptr1)) !=EOF){
+	characters++;
+	 if (ch == '
+' || ch == '\0')
+      lines++;
+   if (ch == ' ' || ch == '\t' || ch == '
+' || ch == '\0')
+      words++;
+   }
+   if (characters > 0){
+      words++;
+      lines++;
+   }
+   printf("
+");
+  printf("Total characters = %d
+", characters);
+   printf("Total words = %d
+", words);
+   printf("Total lines = %d
+", lines);
+   fclose(fptr1);
+   return 0;
+}
