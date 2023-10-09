@@ -47,7 +47,7 @@ void invalid(char *follow)
 
 int main(int argc, char const *argv[])
 {
-	fp = fopen(argv[1], "r");
+	fp = fopen("test.c", "r");
 	if (fp == NULL){
 	printf("Cannot open file \n");
 	exit(0); }	
